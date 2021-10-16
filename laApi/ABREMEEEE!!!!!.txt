@@ -1,0 +1,28 @@
+Antes de iniciar es recomendable .
+*virtualizar un entorno de trabajo para python
+con el siguiente comando:
+
+py -m venv box
+
+*despues se activa el entorno de la siguiente forma:
+
+box\Scripts\activate
+
+*despues hubicate en la carpeta Home donde se encuetra el archivo requirements.txt
+ejecuta el siguiente comando:
+
+pip install -r requirements.txt
+
+*esto instala todo lo que neceitas para iniciar la api de forma local.
+
+*despues ejecuta:
+
+py manage.py migrate 
+
+*para crear la base de datos y la tabla "user" solo en caso de ser necesario.
+
+*para iniciar el servidor ejecuta:
+
+py manage.py runserver
+
+*y listo!!!
