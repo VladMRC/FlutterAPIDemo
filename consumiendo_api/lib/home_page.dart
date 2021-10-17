@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 String? stringRespose;
-Map? mapRespose;
+List? mapRespose;
 Map? dataRespose;
 List? listRespose;
 
@@ -15,12 +15,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Future apicall() async {
     http.Response response;
-    response = await http.get(Uri.parse("https://reqres.in/api/users?page=2"));
+    response = await http.get(Uri.parse("https://striker-one.herokuapp.com/users/"));
     if (response.statusCode == 200) {
       setState(() {
         stringRespose = response.body;
         mapRespose = json.decode(response.body);
-        listRespose = mapRespose!['data'];
+        listRespose = mapRespose;
       });
     }
   }
