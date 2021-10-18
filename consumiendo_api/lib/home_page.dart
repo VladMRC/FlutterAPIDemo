@@ -15,7 +15,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Future apicall() async {
     http.Response response;
-    response = await http.get(Uri.parse("https://striker-one.herokuapp.com/users/"));
+    response = await http.get(Uri.parse("https://consumo-demo.herokuapp.com/users"));
+    //response = await http.get(Uri.parse("https://striker-one.herokuapp.com/users/"));
     if (response.statusCode == 200) {
       setState(() {
         stringRespose = response.body;
